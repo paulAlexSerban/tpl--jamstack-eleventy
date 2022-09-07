@@ -1,0 +1,20 @@
+{
+  "name": "eleventy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "echo 'linter scripts'",
+    "watch": "npx @11ty/eleventy --serve --port=4003",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
+    "html-minifier": "^4.0.0"
+  }
+}
