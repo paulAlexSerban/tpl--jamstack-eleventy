@@ -1,0 +1,20 @@
+---
+css:
+  - page: base.page.css
+  - template: blog.template.layer.css
+
+js:
+  - page: base.page.layer.js
+  - template: blog.template.layer.js
+---
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../common/head'); %>
+<body>
+  <%- include('../../library/modules/header'); %>
+
+  <%- content %>
+
+  <%- include('../common/foot'); %>
+</body>
+</html>

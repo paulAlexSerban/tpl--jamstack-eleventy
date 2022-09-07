@@ -1,0 +1,5 @@
+<% 
+js.forEach(file => { 
+  for (const [key, value] of Object.entries(file)) { %>
+    <%- include('scripts', {type: key, file: value}); %>
+<% }}); %>
