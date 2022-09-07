@@ -18,14 +18,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: "🔍  Verify Changed .yaml files"
-        uses: tj-actions/changed-files@v23.1
-        id: changed-yaml-files
-        with:
-          files: |
-              *.yml
-              **/*.yml
-
       - name: "🔍  Verify Changed .bash or .sh files"
         uses: tj-actions/changed-files@v23.1
         id: changed-bash-files
@@ -45,12 +37,6 @@ jobs:
           for file in ${{ steps.changed-bash-files.outputs.all_changed_files }}; do
             echo "$file was changed"
           done
-
-      - name: "🧪 Lint Yaml"
-        if: steps.changed-yaml-files.outputs.any_changed == 'true'
-        uses: ibiqlik/action-yamllint@v3
-        with:
-          file_or_dir: ./**/*.yml
       
       - name: "🧪  Lint Bash Script with ShellCheck"
         if: steps.changed-bash-files.outputs.any_changed == 'true'
